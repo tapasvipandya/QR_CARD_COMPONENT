@@ -1,79 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Outfit:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Outfit:wght@400;700&display=swap");
 
-
-body{
-    background: hsl(212, 45%, 89%);
-    box-sizing: border-box;
-    margin: 0;
-    border: 0;
+body {
+  background: hsl(212, 45%, 89%);
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
 }
 
-.main-container{
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    width: 320px;
-    height: 497px;
-    border-radius: 20px;
-    margin: 152px auto;
-    align-items: center;
-    align-content: center;
-
-  
-   
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width: 320px;
+  height: 497px;
+  border-radius: 20px;
+  margin: 152px auto;
+  align-items: center;
+  align-content: center;
 }
 
-.img-section img{
-    width: 288px;
+.card__img img {
+  width: 288px;
+  height: 288px;
+  padding: 16px 16px 0 16px;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__text .card__text--bold h3 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  width: 288px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card__text .card__text--light p {
+  font-size: 15px;
+  color: #7d889e;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  width: 256px;
+  text-align: center;
+  margin: auto;
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 279px;
+  }
+  .card__img img {
+    width: 251.5px;
     height: 288px;
-    padding:16px 16px 0 16px;
-}
-
-.text-section{
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-.text-section .bold-text-section h3{
-    font-family: 'Outfit' , sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    width: 288px;
-    text-align: center;
-    margin-bottom: 15px;
-    }
-
-.text-section .light-text-section p{
-    font-size: 15px;
-    color: #7D889E;
-    font-family: 'Outfit' , sans-serif;
-    font-weight: 400;
-    width: 256px;
-    text-align: center;
-    margin: auto;
   }
 
-
-  @media (max-width:375px){
-
-    .main-container{
-        width: 279px;
-        
-    }
-    .img-section img{
-        width: 251.5px;
-        height: 288px;
-    }
-
-    .text-section .bold-text-section h3{
-        width: 251.5px;
-    }
-
-    .text-section .light-text-section p{
-        width: 223.2px ;
-    }
-    
+  .card__text .card__text--bold h3 {
+    width: 251.5px;
   }
 
+  .card__text .card__text--light p {
+    width: 223.2px;
+  }
+}
